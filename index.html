@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Ремонт техники | Черемухово</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #0a0a0c;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #eef2f0;
+            line-height: 1.5;
+            min-height: 100vh;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 20%, rgba(30, 200, 120, 0.08), rgba(0, 0, 0, 0) 70%),
+                        radial-gradient(circle at 80% 70%, rgba(80, 180, 200, 0.06), transparent 60%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+        .glass {
+            background: rgba(10, 12, 14, 0.65);
+            backdrop-filter: blur(10px);
+            border-radius: 2rem;
+            border: 1px solid rgba(70, 180, 120, 0.3);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(70, 220, 140, 0.05);
+            padding: 2rem;
+        }
+        h1 {
+            font-size: 2.1rem;
+            font-weight: 500;
+            background: linear-gradient(135deg, #c4f0d0, #8cc084);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin: 1.6rem 0 1rem 0;
+            padding-left: 0.8rem;
+            border-left: 3px solid #6bb86b;
+            color: #d4f0dc;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .item {
+            background: rgba(18, 22, 20, 0.7);
+            border-radius: 1.5rem;
+            padding: 1rem 1.2rem;
+            border: 1px solid rgba(80, 150, 90, 0.25);
+            transition: 0.2s;
+        }
+        .item:hover {
+            border-color: #6bb86b;
+            background: rgba(25, 35, 28, 0.8);
+        }
+        .price {
+            font-weight: 600;
+            color: #a0e0a0;
+            margin-top: 0.5rem;
+            font-size: 1.05rem;
+        }
+        .contact-area {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 0.5rem;
+        }
+        .phone {
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin: 0.5rem 0;
+        }
+        .phone a {
+            text-decoration: none;
+            color: #d0f0d0;
+            background: rgba(30, 55, 35, 0.5);
+            padding: 0.3rem 1rem;
+            border-radius: 3rem;
+        }
+        .profile-link {
+            display: inline-block;
+            background: #2d6a3a;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            margin-top: 0.8rem;
+            font-weight: 500;
+        }
+        .note {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-top: 1rem;
+        }
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.75rem;
+            color: #7a8a7c;
+            border-top: 1px solid rgba(80, 130, 80, 0.2);
+            padding-top: 1.2rem;
+        }
+        @media (max-width: 700px) {
+            .glass { padding: 1.2rem; }
+            .phone { font-size: 1.4rem; }
+            h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="glass">
+        <h1>🔧 Ремонт техники · Черемухово</h1>
+        <p>Работаю на дому — вы привозите. Качественно, честно, с гарантией.</p>
+
+        <h2>🛠️ Услуги</h2>
+        <div class="grid">
+            <div class="item">💻 ПК и ноутбуки — чистка, термопаста, диагностика</div>
+            <div class="item">⚙️ Апгрейд — SSD, память, Windows, драйверы</div>
+            <div class="item">📱 Смартфоны, планшеты — дисплей, аккумулятор, разъём</div>
+        </div>
+
+        <h2>💰 Цены (работа)</h2>
+        <div class="grid">
+            <div class="item">Чистка ноутбука + термопаста<div class="price">1 500 ₽</div></div>
+            <div class="item">Установка SSD (работа)<div class="price">2 000 ₽</div></div>
+            <div class="item">Установка Windows / драйверы<div class="price">1 200 ₽</div></div>
+            <div class="item">Замена дисплея телефона<div class="price">2 000 ₽ + экран</div></div>
+            <div class="item">Замена дисплея планшета<div class="price">от 3 000 ₽ + экран</div></div>
+            <div class="item">Замена аккумулятора<div class="price">1 200 ₽ + батарея</div></div>
+            <div class="item">Ремонт разъема зарядки<div class="price">1 200 – 1 800 ₽</div></div>
+            <div class="item">Диагностика (при ремонте)<div class="price">Бесплатно</div></div>
+        </div>
+
+        <div class="contact-area">
+            <div class="phone"><a href="tel:+79091705898">📞 +7 (909) 170-58-98</a></div>
+            <div><a href="https://max.ru/u/f9LHodD0cOIJezTlaqad8drkT_JVx2wh4EwHFS20CNwH-9XSF0Fan073BTo" target="_blank" class="profile-link">Мой профиль</a></div>
+            <div class="note">📍 Посёлок Черемухово, самоввоз. Звоните — договоримся.</div>
+        </div>
+    </div>
+    <footer>© 2026 · Все права защищены</footer>
+</div>
+</body>
+  </html>
